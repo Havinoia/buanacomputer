@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Perbaikan laptop, komputer, dan perangkat digital Anda kini lebih mudah. Hadirkan teknisi ahli langsung ke <strong className="text-white">Lokasi Anda</strong> atau kunjungi <strong className="text-white">Toko</strong> kami untuk solusi perbaikan yang cepat, transparan, dan bergaransi.
+              Perbaikan laptop, komputer, dan perangkat digital Anda kini lebih mudah. Hadirkan teknisi ahli langsung ke <strong className="text-white">Lokasi Anda</strong> atau kunjungi <strong className="text-white">Buana Computer</strong> untuk solusi perbaikan yang cepat, transparan, dan bergaransi.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
