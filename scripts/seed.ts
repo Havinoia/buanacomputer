@@ -26,7 +26,7 @@ const dummyServices = [
     category: 'laptop',
     description: 'Performa monster untuk profesional kreatif. Chip M3 Max, RAM 64GB, SSD 2TB.',
     image_url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 45000000
+    price_estimate: 51500000
   },
   {
     brand: 'ASUS',
@@ -34,7 +34,7 @@ const dummyServices = [
     category: 'laptop',
     description: 'Laptop gaming kelas atas dengan layar 240Hz dan RTX 4070.',
     image_url: 'https://images.unsplash.com/photo-1593642381407-3fbd550672e8?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 24500000
+    price_estimate: 26900000
   },
   {
     brand: 'Dell',
@@ -42,7 +42,7 @@ const dummyServices = [
     category: 'laptop',
     description: 'Desain bezel-less tercanggih. Sangat tipis dan ringan untuk mobilitas tinggi.',
     image_url: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 19000000
+    price_estimate: 21500000
   },
   {
     brand: 'Lenovo',
@@ -50,7 +50,7 @@ const dummyServices = [
     category: 'laptop',
     description: 'Standar tertinggi laptop bisnis. Tahan banting dengan keyboard legendaris.',
     image_url: 'https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 22000000
+    price_estimate: 24000000
   },
   {
     brand: 'HP',
@@ -58,7 +58,7 @@ const dummyServices = [
     category: 'laptop',
     description: 'Performa gaming solid dengan harga terjangkau untuk mahasiswa.',
     image_url: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 12000000
+    price_estimate: 13500000
   },
 
   // Spareparts
@@ -68,7 +68,7 @@ const dummyServices = [
     category: 'sparepart',
     description: 'Kecepatan read up to 7450MB/s. Terbaik untuk gaming dan editing video.',
     image_url: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 1850000
+    price_estimate: 2150000
   },
   {
     brand: 'Corsair',
@@ -76,7 +76,7 @@ const dummyServices = [
     category: 'sparepart',
     description: 'RAM generasi terbaru dengan performa tinggi dan stabilitas tinggi.',
     image_url: 'https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 2200000
+    price_estimate: 1950000
   },
   {
     brand: 'Apple',
@@ -84,7 +84,7 @@ const dummyServices = [
     category: 'sparepart',
     description: 'Suku cadang baterai original untuk MacBook Air untuk daya tahan maksimal.',
     image_url: 'https://images.unsplash.com/photo-1611078489935-0cb964de46d6?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 1450000
+    price_estimate: 1650000
   },
   {
     brand: 'Logitech',
@@ -92,7 +92,7 @@ const dummyServices = [
     category: 'sparepart',
     description: 'Mouse ergonomis terbaik untuk produktivitas tingkat tinggi.',
     image_url: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 1600000
+    price_estimate: 1550000
   },
   {
     brand: 'Cooler Master',
@@ -100,7 +100,7 @@ const dummyServices = [
     category: 'sparepart',
     description: 'Konduktivitas panas tinggi untuk menjaga suhu CPU/GPU tetap dingin.',
     image_url: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 125000
+    price_estimate: 175000
   },
 
   // Servis Panggilan
@@ -110,7 +110,7 @@ const dummyServices = [
     category: 'servis_panggilan',
     description: 'Pembersihan debu total dan penggantian pasta pendingin agar laptop tidak panas.',
     image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 250000
+    price_estimate: 350000
   },
   {
     brand: 'Buana',
@@ -126,7 +126,7 @@ const dummyServices = [
     category: 'servis_panggilan',
     description: 'Penanganan ahli untuk masalah laptop mati total atau konslet komponen.',
     image_url: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 850000
+    price_estimate: 1500000
   },
   {
     brand: 'Buana',
@@ -134,7 +134,7 @@ const dummyServices = [
     category: 'servis_panggilan',
     description: 'Solusi engsel patah, casing pecah, atau body laptop yang tidak presisi.',
     image_url: 'https://images.unsplash.com/photo-1587829741301-dc798b83dadc?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 350000
+    price_estimate: 450000
   },
   {
     brand: 'Buana',
@@ -142,7 +142,7 @@ const dummyServices = [
     category: 'servis_panggilan',
     description: 'Upaya penyelamatan data dari harddisk atau SSD yang rusak atau terhapus.',
     image_url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 1200000
+    price_estimate: 2500000
   }
 ];
 
@@ -173,8 +173,12 @@ async function runSeed() {
     }
   }
 
-  // 2. Input Layanan Baru
-  console.log('\n📥 Memasukkan data layanan dummy...');
+  // 2. Bersihkan Data Lama & Input Layanan Baru
+  console.log('\n📥 Membersihkan data lama dan memasukkan data layanan baru...');
+  
+  // Hapus semua data di tabel services terlebih dahulu
+  await supabase.from('services').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+
   const { data, error } = await supabase
     .from('services')
     .insert(dummyServices)

@@ -4,11 +4,12 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { User } from '@supabase/supabase-js';
-import { Laptop, LogIn, UserPlus, LogOut, User as UserIcon } from 'lucide-react';
+import { Laptop, LogIn, UserPlus, LogOut, User as UserIcon, Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Get initial session
@@ -43,29 +44,29 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
 
-          {/* Nav Links */}
+          {/* Nav Links (Desktop) */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Beranda
             </Link>
-            <Link href="#showcase" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+            <Link href="/#showcase" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Showcase
             </Link>
-            <Link href="#services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+            <Link href="/#services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Layanan
             </Link>
-            <Link href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+            <Link href="/#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Tentang Kami
             </Link>
           </div>
 
-          {/* Auth Actions */}
+          {/* Auth Actions & Mobile Toggle */}
           <div className="flex items-center gap-3">
             {loading ? (
               <div className="w-24 h-8 bg-slate-800 animate-pulse rounded-full" />
             ) : user ? (
               <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full">
+                <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full">
                   <UserIcon className="w-4 h-4 text-slate-400" />
                   <span className="text-xs font-medium text-slate-200">
                     {user.user_metadata?.full_name || user.email?.split('@')[0]}
@@ -80,7 +81,7 @@ const Navbar: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-2">
+              <div className="hidden sm:flex items-center gap-2">
                 <Link
                   href="/login"
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
@@ -97,9 +98,60 @@ const Navbar: React.FC = () => {
                 </Link>
               </div>
             )}
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMenuOpen && (
+        <div className="md:hidden border-t border-slate-900 bg-slate-950 animate-in slide-in-from-top duration-300">
+          <div className="px-4 pt-2 pb-6 flex flex-col gap-1">
+            {[
+              { name: 'Beranda', href: '/' },
+              { name: 'Showcase', href: '/#showcase' },
+              { name: 'Layanan', href: '/#services' },
+              { name: 'Tentang Kami', href: '/#about' }
+            ].map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-900 rounded-xl transition-all"
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Auth for Mobile */}
+            {!user && !loading && (
+              <div className="grid grid-cols-2 gap-3 mt-4 px-4">
+                <Link 
+                  href="/login"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-bold border border-slate-800 text-slate-300 rounded-xl"
+                >
+                  Masuk
+                </Link>
+                <Link 
+                  href="/register"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-bold bg-blue-600 text-white rounded-xl"
+                >
+                  Daftar
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

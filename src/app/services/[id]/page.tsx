@@ -232,14 +232,14 @@ export default function ServiceDetailPage() {
                     <button
                       type="submit"
                       disabled={bookingLoading}
-                      className="w-full py-4 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-bold rounded-2xl shadow-xl shadow-blue-500/20 transition-all active:scale-95 flex items-center justify-center gap-3"
+                      className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-bold rounded-2xl shadow-xl shadow-emerald-500/20 transition-all active:scale-95 flex items-center justify-center gap-3"
                     >
                       {bookingLoading ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
                       ) : (
                         <>
-                          <Send className="w-5 h-5" />
-                          {service.category === 'servis_panggilan' ? 'Kirim Pesanan' : 'Pesan Sekarang'}
+                          <MessageSquare className="w-5 h-5" />
+                          Pesan lewat WhatsApp
                         </>
                       )}
                     </button>

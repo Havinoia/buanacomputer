@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
 import ServiceCard from '@/components/ServiceCard';
 import { supabase } from '@/lib/supabase';
 import { Service } from '@/types/database';
@@ -91,7 +92,7 @@ export default function Home() {
             </div>
 
             {/* Category Tabs */}
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-hide px-2">
               {[
                 { id: 'all', label: 'Semua' },
                 { id: 'laptop', label: 'Laptop' },
@@ -100,7 +101,7 @@ export default function Home() {
                 <button
                   key={tab.id}
                   onClick={() => setSelectedCategory(tab.id as any)}
-                  className={`px-6 py-2 rounded-full text-xs font-bold transition-all ${
+                  className={`flex-shrink-0 px-6 py-2 rounded-full text-xs font-bold transition-all ${
                     selectedCategory === tab.id 
                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20 scale-105' 
                     : 'bg-slate-900 text-slate-500 border border-slate-800 hover:border-slate-700 hover:text-slate-300'
@@ -171,6 +172,8 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      <About />
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-900 bg-black/50 text-center">

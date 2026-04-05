@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Zap, MonitorCheck } from 'lucide-react';
+import { ShieldCheck, Zap, MonitorCheck, MapPin } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -20,28 +20,36 @@ const Hero: React.FC = () => {
               #1 Jasa Service Komputer di Kota Anda
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight bg-gradient-to-br from-white via-white to-slate-500 bg-clip-text text-transparent">
-              Servis di toko atau <br/>
-              Panggilan ke <span className="text-blue-500 underline decoration-4 underline-offset-8">rumah</span>.
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight bg-gradient-to-br from-white via-white to-slate-500 bg-clip-text text-transparent">
+              Servis di toko atau <br className="hidden sm:block"/>
+              Panggilan ke <span className="text-blue-500 underline decoration-4 underline-offset-8 transition-all hover:decoration-blue-400">rumah</span>.
             </h1>
 
-            <p className="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Perbaikan laptop, komputer, dan perangkat digital Anda kini lebih mudah. Hadirkan teknisi ahli langsung ke <strong className="text-white">Lokasi Anda</strong> atau kunjungi <strong className="text-white">Toko</strong> kami untuk solusi perbaikan yang cepat, transparan, dan bergaransi.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
-              <Link 
-                href="#services"
-                className="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-2xl shadow-blue-500/40 transition-all hover:-translate-y-1 active:scale-95"
+              <a 
+                href="https://wa.me/628123456789?text=Halo%20Buana%20Computer,%20saya%20ingin%20konsultasi%20mengenai%20service%20laptop/komputer."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-10 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-2xl shadow-2xl shadow-emerald-500/40 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
               >
-                Jelajahi Layanan
-              </Link>
-              <Link 
-                href="#about"
-                className="w-full sm:w-auto px-10 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-bold rounded-2xl transition-all hover:-translate-y-1 active:scale-95"
+                <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                </div>
+                Konsultasi WhatsApp
+              </a>
+              <a 
+                href="https://maps.app.goo.gl/WBiZgebhHJYCbRqGA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-10 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-bold rounded-2xl transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
               >
-                Pelajari Lebih Lanjut
-              </Link>
+                <MapPin className="w-5 h-5 text-blue-500" />
+                Lihat Lokasi Toko
+              </a>
             </div>
 
             <div className="flex flex-wrap gap-8 pt-8 justify-center lg:justify-start">

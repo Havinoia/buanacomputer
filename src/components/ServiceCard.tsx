@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         <img 
           src={service.image_url} 
           alt={service.model} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale-0 lg:grayscale lg:group-hover:grayscale-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60" />
         <div className="absolute top-4 left-4 flex gap-2">
