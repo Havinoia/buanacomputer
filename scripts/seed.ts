@@ -28,14 +28,7 @@ const dummyServices = [
     image_url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop',
     price_estimate: 51500000
   },
-  {
-    brand: 'ASUS',
-    model: 'ROG Strix G16 (2024)',
-    category: 'laptop',
-    description: 'Laptop gaming kelas atas dengan layar 240Hz dan RTX 4070.',
-    image_url: 'https://images.unsplash.com/photo-1593642381407-3fbd550672e8?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 26900000
-  },
+  
   {
     brand: 'Dell',
     model: 'XPS 13 Ultrabook',
@@ -44,14 +37,7 @@ const dummyServices = [
     image_url: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=1200&auto=format&fit=crop',
     price_estimate: 21500000
   },
-  {
-    brand: 'Lenovo',
-    model: 'ThinkPad X1 Carbon Gen 11',
-    category: 'laptop',
-    description: 'Standar tertinggi laptop bisnis. Tahan banting dengan keyboard legendaris.',
-    image_url: 'https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 24000000
-  },
+  
   {
     brand: 'HP',
     model: 'Victus 15 Gaming',
@@ -127,23 +113,8 @@ const dummyServices = [
     description: 'Penanganan ahli untuk masalah laptop mati total atau konslet komponen.',
     image_url: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=1200&auto=format&fit=crop',
     price_estimate: 1500000
-  },
-  {
-    brand: 'Buana',
-    model: 'Perbaikan Engsel & Body',
-    category: 'servis_panggilan',
-    description: 'Solusi engsel patah, casing pecah, atau body laptop yang tidak presisi.',
-    image_url: 'https://images.unsplash.com/photo-1587829741301-dc798b83dadc?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 450000
-  },
-  {
-    brand: 'Buana',
-    model: 'Recovery Data Profesional',
-    category: 'servis_panggilan',
-    description: 'Upaya penyelamatan data dari harddisk atau SSD yang rusak atau terhapus.',
-    image_url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop',
-    price_estimate: 2500000
   }
+  
 ];
 
 const dummyUsers = [
