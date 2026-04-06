@@ -178,7 +178,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-slate-900 bg-black/50 text-center">
         <p className="text-sm text-slate-500">
-          © 2024 Buana Computer. All Rights Reserved. <br/>
+          © {new Date().getFullYear()} Buana Computer. All Rights Reserved. <br/>
           Built with Excellence and Precision.
         </p>
       </footer>
